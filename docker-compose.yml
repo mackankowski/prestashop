@@ -1,0 +1,21 @@
+version: '2'
+services:
+  webserver:
+    build: .
+    image: prestashop:1.6
+    ports:
+      - "8888:80"
+      - "443:443"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db
+  db:
+    image: mysql:5.7
+    ports: 
+      - "4444:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=prestashop
+      - MYSQL_DATABASE=prestashop
