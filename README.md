@@ -8,12 +8,14 @@ Simple Prestashop's car parts store to demonstrate using Apache server in Docker
 
 1. Install Docker with Docker Compose
 2. In project directory run command: `docker-compose up` (add `-d` param to background running)
+3. Set permissions for **fix.sh** script: `chmod -x fix.sh`, then run: `./fix.sh` (use your db password)
+4. App is ready to run from browser (check for url below)
 
 ## Access
 
 **apache**
 
-- h: 0.0.0.0:8888
+- h: localhost:8888 (or 0.0.0.0:8888)
 
 **mysql**
 
