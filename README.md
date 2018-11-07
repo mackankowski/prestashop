@@ -1,32 +1,40 @@
 # Prestashop with Docker
 
-Simple car parts store to symulate Docker features
+Simple Prestashop's car parts store to demonstrate using Apache server in Docker container.
 
-## images/versions:
+## Get started
 
-* apache `2.4`
-* php `5.6`
-* mysql `5.7`
+> To follow these steps Windows 10 Pro or Unix system is required!
 
-* prestashop `1.6.1.17`
+1. Install Docker with Docker Compose
+2. In project directory run command: `docker-compose up`
 
-## access:
+## Access
 
-__apache__
+**apache**
 
 - h: 0.0.0.0:8888
 
-__mysql__
+**mysql**
 
 - h: 0.0.0.0:4444 (or db)
 - u: root
 - p: prestashop
 
-__presta__
+**prestashop**
+
 - u: prestashop@prestashop.prestashop
 - p: prestashop
 
-## files structure:
+## Specification
+
+- apache `2.4`
+- php `5.6`
+- mysql `5.7`
+
+- prestashop `1.6.1.17`
+
+## Files structure
 
 - [docker-compose.yml](docker-compose.yml)
 
@@ -34,9 +42,9 @@ __presta__
 
 - [prestashop dir: /www](/www)
 
-## helpful commands:
+## Commands
 
-`docker run <image>` 
+`docker run <image>`
 `docker push <image>`
 `docker-compose build && docker-compose up -d`
 `docker-compose down`
@@ -53,7 +61,7 @@ __presta__
 `git commit -m "<message>"`
 `git push -u origin master`
 
-## links:
+## Links:
 
 http://github.com/mackankowski/prestashop/
 
