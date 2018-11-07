@@ -1,1 +1,4 @@
 www/cache
+db/ib_buffer_pool
+db/ib_logfile0
+db/ibdata1
