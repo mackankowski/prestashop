@@ -4,10 +4,10 @@ Simple Prestashop's car parts store to demonstrate using Apache server in Docker
 
 ## Get started
 
-> To follow these steps Windows 10 Pro or Unix system is required!
+> To follow these steps Windows 10 Pro or Unix system is required
 
 1. Install Docker with Docker Compose
-2. In project directory run command: `docker-compose up`
+2. In project directory run command: `docker-compose up` (add `-d` param to background running)
 
 ## Access
 
