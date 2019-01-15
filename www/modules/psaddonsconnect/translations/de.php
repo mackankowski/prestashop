@@ -9,8 +9,8 @@ $_MODULE['<{psaddonsconnect}prestashop>psaddonsconnect_78d320af42aca685d1fcd1113
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_7be54024e8bcd26fb590144aac97ba5f'] = 'UPDATES & TIPPS';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_cdcbcbc85ab3a853719bf11c276be7e1'] = 'Melden Sie sich gleich mit Ihrem Konto an und profitieren Sie von Updates (Sicherheit und Funktionen) für all Ihre Module.';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_1d73e09f3283e07069c6603eb3fabd6e'] = 'Sobald Sie angemeldet sind, erhalten Sie auch wöchentliche Tipps direkt von Ihrem Back Office.';
-$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_fcbde995e5fa9bfef31917f001a27557'] = 'MIT DER ADDONS-MARKTPLATTFORM VERBINDEN';
-$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_1c0b7f4d79e06a46c12312615fc4ab14'] = 'Mit der Addons-Marktplattform verbinden';
+$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_78f1d8c0b05e45e2fd5e2a9549e87589'] = 'MIT DER PRESTASHOP-MARKTPLATTFORM VERBINDEN';
+$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_8438266d57cf7e6781947849125ce017'] = 'Mit der PrestaShop-Marktplattform verbinden';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_4d2e8ed55ef375754bd7c9a78ccf7312'] = 'Verknüpfen Sie Ihren Shop mit Ihrem Addons-Konto, um automatisch wichtige Updates für die von Ihnen gekauften Module zu erhalten. Sie haben noch kein Konto?';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_cedcf6fe65a8f2849fe11e316d6c9923'] = 'Jetzt registrieren';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_b357b524e740bc85b9790a0712d84a30'] = 'E-Mail-Adresse';
@@ -18,7 +18,7 @@ $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_dc647eb65e6711e1553752
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_878530871f0db73f004f5bd6591eeb76'] = 'Anmeldeinformationen speichern';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_2283584ec794bba6bb3a045853c87a61'] = 'LOS GEHT\'S!';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_01a569ddc6cf67ddec2a683f0a5f5956'] = 'Passwort vergessen?';
-$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_fcbde995e5fa9bfef31917f001a27557'] = 'MIT DER ADDONS-MARKTPLATTFORM VERBINDEN';
+$_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_78f1d8c0b05e45e2fd5e2a9549e87589'] = 'MIT DER PRESTASHOP-MARKTPLATTFORM VERBINDEN';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_c4ab50c3866c157bd46ed930ab305eb8'] = 'Tipp des Tages';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_754498b2927bb601e4072f1d7385b984'] = 'Gesamte Auswahl anzeigen';
 $_MODULE['<{psaddonsconnect}prestashop>dashboard_zone_one_bc74efcae6217e0f80935d5307ddfea0'] = 'Praktische Links';

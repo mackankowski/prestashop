@@ -2,9 +2,8 @@ version: '2'
 services:
   webserver:
     build: .
-    image: prestashop:1.6
     ports:
-      - '8888:80'
+      - '80:80'
       - '443:443'
     volumes:
       - ./www:/var/www/html
@@ -20,3 +19,21 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=prestashop
       - MYSQL_DATABASE=prestashop
+  recommender:
+    build:
+      context: ../recommender-system
+      dockerfile: Dockerfile
+    container_name: recommender
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../recommender-system/target:/usr/src
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      links:
+        - db:mysql
+      ports:
+        - 8181:80
+      environment:
+        MYSQL_USERNAME: root
+        MYSQL_ROOT_PASSWORD: prestashop

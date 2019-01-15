@@ -35,9 +35,11 @@ class GAdwords extends Module
 	{
 		$this->name = 'gadwords';
 		$this->tab = 'advertising_marketing';
-		$this->version = '1.3.9';
+		$this->version = '1.3.10';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 1;
+
+        $this->module_key = 'd538ea5fbbb9d4351b6678f60d7367a1';
 
 		$this->bootstrap = true;
 		parent::__construct();
@@ -63,14 +65,14 @@ class GAdwords extends Module
 		{
 			if (version_compare(_PS_VERSION_, '1.5', '>') == true)
 			{
-				$this->context->controller->addCSS($this->_path.'css/gadwords.css');
+				$this->context->controller->addCSS($this->_path.'views/css/gadwords.css');
 				if (version_compare(_PS_VERSION_, '1.6', '<') == true)
-					$this->context->controller->addCSS($this->_path.'css/gadwords-nobootstrap.css');
+					$this->context->controller->addCSS($this->_path.'views/css/gadwords-nobootstrap.css');
 			}
 			else
 			{
-				echo '<link rel="stylesheet" href="'.$this->_path.'css/gadwords.css" type="text/css" />';
-				echo '<link rel="stylesheet" href="'.$this->_path.'css/gadwords-nobootstrap.css" type="text/css" />';
+				echo '<link rel="stylesheet" href="'.$this->_path.'views/css/gadwords.css" type="text/css" />';
+				echo '<link rel="stylesheet" href="'.$this->_path.'views/css/gadwords-nobootstrap.css" type="text/css" />';
 			}
 		}
 	}

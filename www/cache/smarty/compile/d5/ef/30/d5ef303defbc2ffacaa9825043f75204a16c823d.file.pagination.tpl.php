@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-01-26 16:27:48
+<?php /* Smarty version Smarty-3.1.19, created on 2019-01-15 11:57:58
          compiled from "/var/www/html/themes/default-bootstrap/pagination.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20484499595a6b48f43096c9-54484633%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20549360735c3dbcb6ed02c0-81844728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd5ef303defbc2ffacaa9825043f75204a16c823d' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/pagination.tpl',
-      1 => 1516653578,
+      1 => 1541839713,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20484499595a6b48f43096c9-54484633',
+  'nocache_hash' => '20549360735c3dbcb6ed02c0-81844728',
   'function' => 
   array (
   ),
@@ -45,9 +45,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a6b48f442f018_77666480',
+  'unifunc' => 'content_5c3dbcb71b3136_31932528',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a6b48f442f018_77666480')) {function content_5a6b48f442f018_77666480($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5c3dbcb71b3136_31932528')) {function content_5c3dbcb71b3136_31932528($_smarty_tpl) {?>
 
 <?php if (isset($_smarty_tpl->tpl_vars['no_follow']->value)&&$_smarty_tpl->tpl_vars['no_follow']->value) {?>
 	<?php $_smarty_tpl->tpl_vars['no_follow_text'] = new Smarty_variable(' rel="nofollow"', null, 0);?>

@@ -48,7 +48,7 @@ class Badge extends ObjectModel
 
     public $awb;
     
-    const BAGDE_IMG_URL = 'gamification.prestashop.com/api/getBadgeImg';
+    const BAGDE_IMG_URL = '../modules/gamification/views/img/badges/';
     
     /**
      * @see ObjectModel::$definition
@@ -75,7 +75,7 @@ class Badge extends ObjectModel
     
     public function getBadgeImgUrl()
     {
-        return Tools::getShopProtocol().self::BAGDE_IMG_URL.'/'.(int)$this->id_ps_badge.'/'.(int)$this->validated.'.png';
+        return self::BAGDE_IMG_URL .(int)$this->id_ps_badge.'_'.(int)$this->validated.'.png';
     }
     
     public function validate()

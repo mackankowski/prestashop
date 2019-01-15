@@ -29,33 +29,31 @@
 </script>
 <li id="gamification_notif" style="background:none" class="dropdown">
 	<a href="javascript:void(0);" class="dropdown-toggle gamification_notif" data-toggle="dropdown">
-		<i class="icon-trophy"></i>
-                <svg class="icon-trophy-svg" viewBox="0 0 24 24">
-                    <path fill="#6c868e" d="M20.2,2H19.5H18C17.1,2 16,3 16,4H8C8,3 6.9,2 6,2H4.5H3.8H2V11C2,12 3,13 4,13H6.2C6.6,15 7.9,16.7 11,17V19.1C8.8,19.3 8,20.4 8,21.7V22H16V21.7C16,20.4 15.2,19.3 13,19.1V17C16.1,16.7 17.4,15 17.8,13H20C21,13 22,12 22,11V2H20.2M4,11V4H6V6V11C5.1,11 4.3,11 4,11M20,11C19.7,11 18.9,11 18,11V6V4H20V11Z" />
-                </svg>
+		<img src="{$link->getBaseLink()}modules/gamification/views/img/trophy.png" alt="{$notification|intval}"/>
 		<span id="gamification_notif_number_wrapper" class="notifs_badge">
 			<span id="gamification_notif_value">{$notification|intval}</span>
 		</span>
 	</a>
 	<div class="dropdown-menu notifs_dropdown" id="dropdown_gamification">
-		<section id="gamification_notif_wrapper" class="notifs_panel" style="width:325px">
+		<section id="gamification_notif_wrapper" class="notifs_panel">
 			<header class="notifs_panel_header">
-				<h3>{l s='Your Merchant Expertise' mod='gamification'}
-					<span class="label label-default" style="float:right">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
-				</h3>
+				<p>
+					<span class="notifs-title">{l s='Your Merchant Expertise' mod='gamification'}</span>
+					<span class="notifs-level">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
+				</p>
 			</header>
-			<div class="progress" style="margin: 10px">
+			<div class="progress">
 				<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{$current_level_percent|intval}" aria-valuemin="0" aria-valuemax="100" style="width: {$current_level_percent|intval}%;">
-				<span style="color:#FFF">{l s='Level' mod='gamification'} {$current_level|intval} : {$current_level_percent|intval} %</span>
+					<span></span>
 				</div>
 			</div>
 			<!-- Nav tabs -->
-			<ul class="nav nav-tabs" id="gamification_tab" style="margin-left:10px">
-				<li class="active">
-					<a href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;">{l s='Last badge :' mod='gamification'}</a>
+			<ul class="nav nav-tabs" id="gamification_tab">
+				<li class="nav-item active">
+					<a class="nav-link" href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;">{l s='Last badge :' mod='gamification'}</a>
 				</li>
-				<li>
-					<a href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;">{l s='Next badge :' mod='gamification'}</a>
+				<li class="nav-item">
+					<a class="nav-link" href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;">{l s='Next badge :' mod='gamification'}</a>
 				</li>
 			</ul>
 
@@ -92,7 +90,7 @@
 			</div>
 
 			<footer class="panel-footer">
-				<a href="{$link->getAdminLink('AdminGamification')}">{l s='View my complete profile' mod='gamification'}</a>
+				<a href="{$link->getAdminLink('AdminGamification')}">{l s='View my complete profile' mod='gamification'} <i class="material-icons">chevron_right</i></a>
 			</footer>
 		</section>
 	</div>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-01-26 16:11:31
+<?php /* Smarty version Smarty-3.1.19, created on 2019-01-13 12:34:57
          compiled from "/var/www/html/modules/gamification/views/templates/hook/notification_bt.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6881855185a6b4523c8c984-84809315%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9779420105c3b2261882251-54798174%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40a767377adc3931c80391c0678b743058f7f821' => 
     array (
       0 => '/var/www/html/modules/gamification/views/templates/hook/notification_bt.tpl',
-      1 => 1516655164,
+      1 => 1547287000,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6881855185a6b4523c8c984-84809315',
+  'nocache_hash' => '9779420105c3b2261882251-54798174',
   'function' => 
   array (
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5a6b4523d008e1_55949381',
+  'unifunc' => 'content_5c3b2261953742_51810326',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a6b4523d008e1_55949381')) {function content_5a6b4523d008e1_55949381($_smarty_tpl) {?><script>
+<?php if ($_valid && !is_callable('content_5c3b2261953742_51810326')) {function content_5c3b2261953742_51810326($_smarty_tpl) {?><script>
 	var current_id_tab = <?php echo intval($_smarty_tpl->tpl_vars['current_id_tab']->value);?>
 ;
 	var current_level_percent = <?php echo intval($_smarty_tpl->tpl_vars['current_level_percent']->value);?>
@@ -71,44 +71,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </script>
 <li id="gamification_notif" style="background:none" class="dropdown">
 	<a href="javascript:void(0);" class="dropdown-toggle gamification_notif" data-toggle="dropdown">
-		<i class="icon-trophy"></i>
-                <svg class="icon-trophy-svg" viewBox="0 0 24 24">
-                    <path fill="#6c868e" d="M20.2,2H19.5H18C17.1,2 16,3 16,4H8C8,3 6.9,2 6,2H4.5H3.8H2V11C2,12 3,13 4,13H6.2C6.6,15 7.9,16.7 11,17V19.1C8.8,19.3 8,20.4 8,21.7V22H16V21.7C16,20.4 15.2,19.3 13,19.1V17C16.1,16.7 17.4,15 17.8,13H20C21,13 22,12 22,11V2H20.2M4,11V4H6V6V11C5.1,11 4.3,11 4,11M20,11C19.7,11 18.9,11 18,11V6V4H20V11Z" />
-                </svg>
+		<img src="<?php echo $_smarty_tpl->tpl_vars['link']->value->getBaseLink();?>
+modules/gamification/views/img/trophy.png" alt="<?php echo intval($_smarty_tpl->tpl_vars['notification']->value);?>
+"/>
 		<span id="gamification_notif_number_wrapper" class="notifs_badge">
 			<span id="gamification_notif_value"><?php echo intval($_smarty_tpl->tpl_vars['notification']->value);?>
 </span>
 		</span>
 	</a>
 	<div class="dropdown-menu notifs_dropdown" id="dropdown_gamification">
-		<section id="gamification_notif_wrapper" class="notifs_panel" style="width:325px">
+		<section id="gamification_notif_wrapper" class="notifs_panel">
 			<header class="notifs_panel_header">
-				<h3><?php echo smartyTranslate(array('s'=>'Your Merchant Expertise','mod'=>'gamification'),$_smarty_tpl);?>
-
-					<span class="label label-default" style="float:right"><?php echo smartyTranslate(array('s'=>'Level','mod'=>'gamification'),$_smarty_tpl);?>
+				<p>
+					<span class="notifs-title"><?php echo smartyTranslate(array('s'=>'Your Merchant Expertise','mod'=>'gamification'),$_smarty_tpl);?>
+</span>
+					<span class="notifs-level"><?php echo smartyTranslate(array('s'=>'Level','mod'=>'gamification'),$_smarty_tpl);?>
  <?php echo intval($_smarty_tpl->tpl_vars['current_level']->value);?>
  : <?php echo intval($_smarty_tpl->tpl_vars['current_level_percent']->value);?>
  %</span>
-				</h3>
+				</p>
 			</header>
-			<div class="progress" style="margin: 10px">
+			<div class="progress">
 				<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo intval($_smarty_tpl->tpl_vars['current_level_percent']->value);?>
 " aria-valuemin="0" aria-valuemax="100" style="width: <?php echo intval($_smarty_tpl->tpl_vars['current_level_percent']->value);?>
 %;">
-				<span style="color:#FFF"><?php echo smartyTranslate(array('s'=>'Level','mod'=>'gamification'),$_smarty_tpl);?>
- <?php echo intval($_smarty_tpl->tpl_vars['current_level']->value);?>
- : <?php echo intval($_smarty_tpl->tpl_vars['current_level_percent']->value);?>
- %</span>
+					<span></span>
 				</div>
 			</div>
 			<!-- Nav tabs -->
-			<ul class="nav nav-tabs" id="gamification_tab" style="margin-left:10px">
-				<li class="active">
-					<a href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;"><?php echo smartyTranslate(array('s'=>'Last badge :','mod'=>'gamification'),$_smarty_tpl);?>
+			<ul class="nav nav-tabs" id="gamification_tab">
+				<li class="nav-item active">
+					<a class="nav-link" href="#home" data-toggle="tab" data-target="gamification_1" onclick="gamificationDisplayTab(this); return false;"><?php echo smartyTranslate(array('s'=>'Last badge :','mod'=>'gamification'),$_smarty_tpl);?>
 </a>
 				</li>
-				<li>
-					<a href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;"><?php echo smartyTranslate(array('s'=>'Next badge :','mod'=>'gamification'),$_smarty_tpl);?>
+				<li class="nav-item">
+					<a class="nav-link" href="#profile" data-toggle="tab" data-target="gamification_2" onclick="gamificationDisplayTab(this); return false;"><?php echo smartyTranslate(array('s'=>'Next badge :','mod'=>'gamification'),$_smarty_tpl);?>
 </a>
 				</li>
 			</ul>
@@ -170,7 +167,7 @@ $_smarty_tpl->tpl_vars['badge']->_loop = true;
 			<footer class="panel-footer">
 				<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getAdminLink('AdminGamification');?>
 "><?php echo smartyTranslate(array('s'=>'View my complete profile','mod'=>'gamification'),$_smarty_tpl);?>
-</a>
+ <i class="material-icons">chevron_right</i></a>
 			</footer>
 		</section>
 	</div>

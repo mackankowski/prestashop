@@ -37,7 +37,7 @@
 			<!-- PS17 MODAL-->
 		    <div align="center">
 		        <a class="btn btn-info" style="white-space: unset;" href="#" data-toggle="modal" data-target="#ps-module-modal-addons-connect">
-		            <i class="icon-unlock"> </i> {l s='CONNECT TO ADDONS MARKETPLACE' mod='psaddonsconnect'}
+		            <i class="icon-unlock"> </i> {l s='CONNECT TO PRESTASHOP MARKETPLACE' mod='psaddonsconnect'}
 		        </a>
 		    </div>
 		    <div id="ps-module-modal-addons-connect" class="modal  modal-vcenter fade" role="dialog">
@@ -46,7 +46,7 @@
 		            <div class="modal-content">
 		                <div class="modal-header">
 		                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-		                    <h2 class="modal-title module-modal-title"> {l s='Connect to Addons marketplace' mod='psaddonsconnect'} </h2>
+		                    <h2 class="modal-title module-modal-title"> {l s='Connect to PrestaShop marketplace' mod='psaddonsconnect'} </h2>
 		                </div>
 		                <div class="modal-body">
 		                    <div class="row">
@@ -85,7 +85,7 @@
 	    	<!-- SHOW 1.6 MODAL -->
 			<div align="center">
 				<a class="btn btn-info" style="white-space: unset;" href="#" onclick="psGetModal();">
-					<i class="icon-unlock"> </i> {l s='CONNECT TO ADDONS MARKETPLACE' mod='psaddonsconnect'}
+					<i class="icon-unlock"> </i> {l s='CONNECT TO PRESTASHOP MARKETPLACE' mod='psaddonsconnect'}
 				</a>
 			</div>
 		{/if}

@@ -43,4 +43,34 @@ class GamificationTools
         
         return $content;
     }
+
+    /**
+     * Retrieve Json api file, forcing gzip compression to save bandwith.
+     * @param string $url
+     * @param bool $withResponseHeaders
+     * @return string|bool
+     */
+    public static function retrieveJsonApiFile($url, $withResponseHeaders = false)
+    {
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 1);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 1);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($curl, CURLOPT_MAXREDIRS, 2);
+        // @see https://cloud.google.com/appengine/kb/#compression
+        curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
+        curl_setopt($curl, CURLOPT_USERAGENT, 'gzip');
+        curl_setopt($curl, CURLOPT_HEADER, $withResponseHeaders);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $content = curl_exec($curl);
+
+        curl_close($curl);
+
+
+        return $content;
+    }
 }

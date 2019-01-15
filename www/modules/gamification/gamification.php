@@ -28,29 +28,36 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-include_once dirname(__FILE__).'/classes/Badge.php';
-include_once dirname(__FILE__).'/classes/Advice.php';
-include_once dirname(__FILE__).'/classes/Condition.php';
-include_once dirname(__FILE__).'/classes/GamificationTools.php';
+include_once __DIR__.'/classes/Badge.php';
+include_once __DIR__.'/classes/Advice.php';
+include_once __DIR__.'/classes/Condition.php';
+include_once __DIR__.'/classes/GamificationTools.php';
 
 class gamification extends Module
 {
     /* We recommend to not set it to true in production environment. */
     const TEST_MODE = false;
 
+    private $url_data = 'https://gamification.prestashop.com/json/';
+
+    private $cache_data;
+
     public function __construct()
     {
         $this->name = 'gamification';
         $this->tab = 'administration';
-        $this->version = '1.13.0';
+        $this->version = '2.2.1';
         $this->author = 'PrestaShop';
+        $this->ps_versions_compliancy = array(
+            'min' => '1.6.1.0',
+        );
 
         parent::__construct();
 
         $this->displayName = $this->l('Merchant Expertise');
         $this->description = $this->l('Become an e-commerce expert within the blink of an eye!');
-        $this->cache_data = dirname(__FILE__).'/data/';
-        $this->url_data = 'http://gamification.prestashop.com/json/';
+        
+        $this->cache_data = __DIR__.'/data/';
         if (self::TEST_MODE === true) {
             $this->url_data .= 'test/';
         }
@@ -87,7 +94,7 @@ class gamification extends Module
     public function installDb()
     {
         $return = true;
-        include(dirname(__FILE__).'/sql_install.php');
+        include(__DIR__.'/sql_install.php');
         foreach ($sql as $s) {
             $return &= Db::getInstance()->execute($s);
         }
@@ -96,7 +103,7 @@ class gamification extends Module
 
     public function uninstallDb()
     {
-        include(dirname(__FILE__).'/sql_install.php');
+        include(__DIR__.'/sql_install.php');
         foreach ($sql as $name => $v) {
             Db::getInstance()->execute('DROP TABLE '.$name);
         }
@@ -116,10 +123,11 @@ class gamification extends Module
         if (version_compare(_PS_VERSION_, '1.7.0.0', '>=')) {
             //AdminPreferences
             $tab->id_parent = (int)Db::getInstance(_PS_USE_SQL_SLAVE_)
-                                ->getValue('SELECT MIN(id_tab)
-											FROM `'._DB_PREFIX_.'tab`
-											WHERE `class_name` = "'.pSQL('ShopParameters').'"'
-                                        );
+                ->getValue(
+                    'SELECT MIN(id_tab)
+                        FROM `'._DB_PREFIX_.'tab`
+                        WHERE `class_name` = "'.pSQL('ShopParameters').'"'
+                    );
         } else {
             // AdminAdmin
             $tab->id_parent = (int)Tab::getIdFromClassName('AdminAdmin');
@@ -135,9 +143,19 @@ class gamification extends Module
         if ($id_tab) {
             $tab = new Tab($id_tab);
             return $tab->delete();
-        } else {
-            return false;
         }
+
+        return false;
+    }
+
+    public function enable($force_all = false)
+    {
+        return parent::enable($force_all) && Tab::enablingForModule($this->name);
+    }
+
+    public function disable($force_all = false)
+    {
+        return parent::disable($force_all) && Tab::disablingForModule($this->name);
     }
 
     public function getContent()
@@ -174,6 +192,12 @@ class gamification extends Module
         return version_compare($this->version, $db_version, '>');
     }
 
+    /**
+     * Calls the server.
+     *
+     * @return bool|string
+     * @throws PrestaShopException
+     */
     public function hookDisplayBackOfficeHeader()
     {
         //check if currently updatingcheck if module is currently processing update
@@ -183,26 +207,27 @@ class gamification extends Module
 
         if (method_exists($this->context->controller, 'addJquery')) {
             $this->context->controller->addJquery();
-            $this->context->controller->addCss($this->_path.'views/css/gamification.css');
+            $cssFile = 'gamification.css';
+            if (version_compare(_PS_VERSION_, '1.7.0.0', '<=')) {
+                $cssFile = 'gamification-1.6.css';
+            }
+            
+            $this->context->controller->addCss($this->_path.'views/css/'. $cssFile);
 
             //add css for advices
             $advices = Advice::getValidatedByIdTab($this->context->controller->id, true);
+
             $css_str = $js_str = '';
             foreach ($advices as $advice) {
-                $is_css_file_cached = false;
-                $advice_css_path = dirname(__FILE__).'/views/css/advice-'._PS_VERSION_.'_'.(int)$advice['id_ps_advice'].'.css';
+                $advice_css_path = __DIR__.'/views/css/advice-'._PS_VERSION_.'_'.(int)$advice['id_ps_advice'].'.css';
 
                 // 24h cache
                 if (!$this->isFresh($advice_css_path, 86400)) {
                     $advice_css_content = Tools::file_get_contents(Tools::getShopProtocol().'gamification.prestashop.com/css/advices/advice-'._PS_VERSION_.'_'.(int)$advice['id_ps_advice'].'.css');
-                    $is_css_file_cached = file_put_contents($advice_css_path, $advice_css_content);
-                } else {
-                    $is_css_file_cached = true;
+                    file_put_contents($advice_css_path, $advice_css_content);
                 }
 
-                if (!$is_css_file_cached) {
-                    $css_str .= '<link href="'.Tools::getShopProtocol().'gamification.prestashop.com/css/advices/advice-'._PS_VERSION_.'_'.(int)$advice['id_ps_advice'].'.css" rel="stylesheet" type="text/css" media="all" />';
-                } else {
+                if (filesize($advice_css_path) > 0) {
                     $this->context->controller->addCss($this->_path.'views/css/advice-'._PS_VERSION_.'_'.(int)$advice['id_ps_advice'].'.css');
                 }
 
@@ -227,7 +252,7 @@ class gamification extends Module
 
     public function renderHeaderNotification()
     {
-        //check if currently updatingcheck if module is currently processing update
+        //check if currently updating check if module is currently processing update
         if ($this->isUpdating()) {
             return false;
         }
@@ -253,7 +278,7 @@ class gamification extends Module
             'next_badges' => $next_badges,
             'current_id_tab' => (int)$this->context->controller->id,
             'notification' => (int)Configuration::get('GF_NOTIFICATION'),
-            'advice_hide_url' => 'http://gamification.prestashop.com/api/AdviceHide/',
+            'advice_hide_url' => 'https://gamification.prestashop.com/api/AdviceHide/',
             ));
 
         if (version_compare(_PS_VERSION_, '1.6.0', '>=')) {
@@ -280,6 +305,7 @@ class gamification extends Module
         }
 
         $cache_file = $this->cache_data.'data_'.strtoupper($iso_lang).'_'.strtoupper($iso_currency).'_'.strtoupper($iso_country).'.json';
+
         if (!$this->isFresh($cache_file, 86400)) {
             if ($this->getData($iso_lang)) {
                 $data = Tools::jsonDecode(Tools::file_get_contents($cache_file));
@@ -290,7 +316,7 @@ class gamification extends Module
                 $this->processCleanAdvices(array_merge($data->advices, $data->advices_16));
 
                 if (function_exists('openssl_verify') && self::TEST_MODE === false) {
-                    if (!openssl_verify(Tools::jsonencode(array($data->conditions, $data->advices_lang)), base64_decode($data->signature), file_get_contents(dirname(__FILE__).'/prestashop.pub'))) {
+                    if (!openssl_verify(Tools::jsonencode(array($data->conditions, $data->advices_lang)), base64_decode($data->signature), file_get_contents(__DIR__.'/prestashop.pub'))) {
                         return false;
                     }
                 }
@@ -309,7 +335,7 @@ class gamification extends Module
                 }
 
                 if (function_exists('openssl_verify') && self::TEST_MODE === false) {
-                    if (!openssl_verify(Tools::jsonencode(array($data->advices_lang_16)), base64_decode($data->signature_16), file_get_contents(dirname(__FILE__).'/prestashop.pub'))) {
+                    if (!openssl_verify(Tools::jsonencode(array($data->advices_lang_16)), base64_decode($data->signature_16), file_get_contents(__DIR__.'/prestashop.pub'))) {
                         return false;
                     }
                 }
@@ -330,9 +356,9 @@ class gamification extends Module
         $iso_currency = $this->context->currency->iso_code;
         $file_name = 'data_'.strtoupper($iso_lang).'_'.strtoupper($iso_currency).'_'.strtoupper($iso_country).'.json';
         $versioning = '?v='.$this->version.'&ps_version='._PS_VERSION_;
-        $data = Tools::file_get_contents($this->url_data.$file_name.$versioning);
+        $data = GamificationTools::retrieveJsonApiFile($this->url_data.$file_name.$versioning);
 
-        return (bool)file_put_contents($this->cache_data.'data_'.strtoupper($iso_lang).'_'.strtoupper($iso_currency).'_'.strtoupper($iso_country).'.json', $data);
+        return (bool) file_put_contents($this->cache_data.'data_'.strtoupper($iso_lang).'_'.strtoupper($iso_currency).'_'.strtoupper($iso_country).'.json', $data, FILE_USE_INCLUDE_PATH);
     }
 
     public function processCleanAdvices()
@@ -496,7 +522,9 @@ class gamification extends Module
         Db::getInstance()->delete('condition_advice', 'id_advice='.(int)$id_advice);
         if (is_array($display_conditions)) {
             foreach ($display_conditions as $cond) {
-                Db::getInstance()->insert('condition_advice', array(
+                Db::getInstance()->insert(
+                    'condition_advice',
+                    array(
                     'id_condition' => (int) $cond_ids[$cond], 'id_advice' => (int) $id_advice, 'display' => 1)
                 );
             }
@@ -504,7 +532,9 @@ class gamification extends Module
 
         if (is_array($hide_conditions)) {
             foreach ($hide_conditions as $cond) {
-                Db::getInstance()->insert('condition_advice', array(
+                Db::getInstance()->insert(
+                    'condition_advice',
+                    array(
                     'id_condition' => (int) $cond_ids[$cond], 'id_advice' => (int) $id_advice, 'display' => 0)
                 );
             }
@@ -513,7 +543,9 @@ class gamification extends Module
         Db::getInstance()->delete('tab_advice', 'id_advice='.(int)$id_advice);
         if (isset($tabs) && is_array($tabs) && count($tabs)) {
             foreach ($tabs as $tab) {
-                Db::getInstance()->insert('tab_advice', array(
+                Db::getInstance()->insert(
+                    'tab_advice',
+                    array(
                     'id_tab' => (int)Tab::getIdFromClassName($tab), 'id_advice' => (int) $id_advice)
                 );
             }
@@ -534,13 +566,13 @@ class gamification extends Module
 
     public function isFresh($file, $timeout = 86400000)
     {
-        if (file_exists($file)) {
-            if (filesize($file) < 1) {
-                return false;
-            }
-            return ((time() - @filemtime($file)) < $timeout);
-        } else {
+        if (!file_exists($file)) {
             return false;
         }
+
+        $lastFileUpdate = filemtime($file) + $timeout;
+        $now = time();
+
+        return $now < $lastFileUpdate;
     }
 }

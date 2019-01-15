@@ -238,6 +238,22 @@
 						</a>
 					</li>
 				</ul>
+				{*<h1>Oceń produkt</h1>
+				<div class="rating_container">
+					<span class="ratingStar fa fa-star" value="1"></span>
+					<span class="ratingStar fa fa-star" value="2"></span>
+					<span class="ratingStar fa fa-star" value="3"></span>
+					<span class="ratingStar fa fa-star" value="4"></span>
+					<span class="ratingStar fa fa-star" value="5"></span>
+				</div>*}
+				<script>
+				const ratingStars = document.querySelectorAll('.ratingStar');
+				for (var i = 0; i < ratingStars.length; i++) {
+					ratingStars[i].addEventListener('click', function(event) {
+						const ratingScore = event.target.attributes['value'];
+   				});
+				}
+				</script>
 			{/if}
 		</div>
 		<!-- end center infos-->

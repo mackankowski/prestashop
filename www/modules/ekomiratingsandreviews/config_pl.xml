@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>ekomiratingsandreviews</name>
+	<displayName><![CDATA[eKomi Ratings and Reviews]]></displayName>
+	<version><![CDATA[1.5.1]]></version>
+	<description><![CDATA[eKomi Ratings and Reviews allows to read the necessary order details 
+        automatically from your shop system database which will enable eKomi to send a review request to your client, 
+        determine which order status should trigger the review request, contact your clients via email or SMS, request 
+        both seller and product reviews from your clients, display product reviews and ratings automatically on the 
+        corresponding product pages through our Product Review Container (PRC). If you have any questions regarding the 
+        plugin, please get in touch! Email us at support@ekomi.de, call us on +1 844-356-6487, or fill out our contact 
+        form.]]></description>
+	<author><![CDATA[eKomi]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>blocklink</name>
+	<displayName><![CDATA[Blok własnych link&oacute;w]]></displayName>
+	<version><![CDATA[1.6.1]]></version>
+	<description><![CDATA[Dodaje blok z możliwością wstawienia własnych link&oacute;w do dowolnych stron.]]></description>
+	<author><![CDATA[PrestaShop]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Jesteś pewien, że chcesz usunąć wszystkie Twoje linki?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

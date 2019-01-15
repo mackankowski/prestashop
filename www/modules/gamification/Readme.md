@@ -35,3 +35,19 @@ That's it: you have contributed to this open-source project! Congratulations!
 [2]: http://doc.prestashop.com/display/PS16/How+to+write+a+commit+message
 [3]: https://help.github.com/articles/using-pull-requests
 
+### Execute the testsuite
+
+This module is shipped with a testsuite using PHPUnit, you need Composer to install the dependencies:
+
+```
+composer install
+composer test
+```
+
+### Versions of PrestaShop supported
+
+This module is compatible with 1.6.1.x and 1.7.x versions.
+
+> As of 31th of october, 2018, PrestaShop 1.6.1.x will only receives security patches.
+
+This module is maintained for 1.7.4.x and above *only*.

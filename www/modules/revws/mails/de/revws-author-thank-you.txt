@@ -1,0 +1,18 @@
+Betreff: {shop_name} - Vielen Dank f�r Ihre Bewertung
+
+Hallo,
+
+vielen Dank f�r Ihre Bewertung! Wir sind Ihnen f�r Ihre Bewertung sehr dankbar. 
+
+Zur Erinnerung, das war Ihre Bewertung:
+
+Artikel: {product_name}
+Bewertung: {ratings}
+�berschrift: {title}
+Inhalt: {content}
+Der gezeigte Name: {display_name}
+
+Nochmals vielen, vielen Dank!
+{shop_name}
+
+

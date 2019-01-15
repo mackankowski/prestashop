@@ -8569,3 +8569,10 @@ div.star.star_hover:after {
   cursor: pointer; }
 
 /*# sourceMappingURL=global.css.map */
+.rating_container .checked {
+  color: orange;
+}
+
+.fa {
+  font-size: 23px!important;
+}

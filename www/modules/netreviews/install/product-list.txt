@@ -1,0 +1,36 @@
+<!--
+* 2012-2018 NetReviews
+*  @author    NetReviews SAS <contact@avis-verifies.com>
+*  @copyright 2017 NetReviews SAS
+*  @version   Release: $Revision: 7.6.5
+*  @license   NetReviews
+*  @date      20/09/2018
+*  International Registered Trademark & Property of NetReviews SAS
+-->
+
+ <!-- START Netreviews Category stars Override -->
+        {if isset($product.av_rate) && !empty($product.av_rate)}
+        <div class="av_category_stars">
+            <a href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.av_nb_reviews} avis">
+              <div class="netreviews_review_rate_and_stars">
+                <div class="netreviews_font_stars">
+                   <div>
+                      {for $av_star=1 to 5 }<span class="nr-icon nr-star grey"></span>{/for}
+                   </div>
+                   <div style="color:#{$product.customized_star_color}">
+                      {for $av_star=0 to $product.av_rate_percent.floor}<span class="nr-icon nr-star"></span>{/for}{if $product.av_rate_percent.decimals}<span class="nr-icon nr-star" style="width:{$product.av_rate_percent.decimals}%;"></span>{/if}
+                   </div>  
+                </div> 
+              </div>
+                 <div class="ratingText">
+                    {$product.av_nb_reviews}
+                     {if $product.av_nb_reviews > 1}
+                        {$product.l.reviews}
+                    {else}
+                        {$product.l.review}
+                    {/if}
+                </div>
+            </a>
+        </div>
+        {/if}
+<!-- END Netreviews Category stars Override-->

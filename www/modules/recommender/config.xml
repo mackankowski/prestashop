@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>user-based-recommendations</name>
+	<displayName><![CDATA[User-based Recommendations]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[User-based Recommendations]]></description>
+	<author><![CDATA[mackan.pl]]></author>
+	<tab><![CDATA[smart_shopping]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

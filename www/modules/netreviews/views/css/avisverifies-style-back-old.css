@@ -1,0 +1,898 @@
+/**
+* 2012-2018 NetReviews
+*
+*  @author    NetReviews SAS <contact@avis-verifies.com>
+*  @copyright 2018 NetReviews SAS
+*  @version   Release: $Revision: 7.6.5
+*  @license   NetReviews
+*  @date      20/09/2018
+*  International Registered Trademark & Property of NetReviews SAS
+*/
+.bootstrap * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.bootstrap *:before,
+.bootstrap *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.bootstrap a {
+    color: #00aff0;
+    text-decoration: none
+}
+
+.bootstrap a:hover,
+.bootstrap a:focus {
+    color: #0077a4;
+    text-decoration: underline
+}
+
+.bootstrap a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.bootstrap img {
+    vertical-align: middle
+}
+
+.bootstrap .img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857;
+    background-color: #EFF1F2;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto
+}
+
+.bootstrap hr {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border: 0;
+    border-top: 1px solid #eee
+}
+
+.bootstrap h1 {
+    font-family: "Ubuntu Condensed", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit
+}
+
+.bootstrap h1 {
+    margin-top: 17px;
+    margin-bottom: 8.5px
+}
+
+.bootstrap h1 {
+    font-size: 31px
+}
+
+.bootstrap p {
+    margin: 0 0 8.5px
+}
+
+.bootstrap ul {
+    margin-top: 0;
+    margin-bottom: 8.5px
+}
+
+.bootstrap .row {
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+.bootstrap .row:before,
+.bootstrap .row:after {
+    content: " ";
+    display: table
+}
+
+.bootstrap .row:after {
+    clear: both
+}
+
+.bootstrap .col-xs-1,
+.bootstrap .col-sm-1,
+.bootstrap .col-lg-1,
+.bootstrap .col-sm-2,
+.bootstrap .col-lg-3,
+.bootstrap .col-xs-4,
+.bootstrap .col-sm-4,
+.bootstrap .col-lg-4,
+.bootstrap .col-sm-5,
+.bootstrap .col-sm-6,
+.bootstrap .col-lg-6,
+.bootstrap .col-sm-7,
+.bootstrap .col-sm-8,
+.bootstrap .col-lg-8,
+.bootstrap .col-lg-9,
+.bootstrap .col-sm-10,
+.bootstrap .col-lg-10,
+.bootstrap .col-xs-11,
+.bootstrap .col-sm-11,
+.bootstrap .col-lg-11,
+.bootstrap .col-xs-12,
+.bootstrap .col-sm-12,
+.bootstrap .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.bootstrap .col-xs-1,
+.bootstrap .col-xs-4,
+.bootstrap .col-xs-11,
+.bootstrap .col-xs-12 {
+    float: left
+}
+
+.bootstrap .col-xs-1 {
+    width: 8.33333%
+}
+
+.bootstrap .col-xs-4 {
+    width: 33.33333%
+}
+
+.bootstrap .col-xs-11 {
+    width: 91.66667%
+}
+
+.bootstrap .col-xs-12 {
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .bootstrap .col-sm-1,
+    .bootstrap .col-sm-2,
+    .bootstrap .col-sm-4,
+    .bootstrap .col-sm-5,
+    .bootstrap .col-sm-6,
+    .bootstrap .col-sm-7,
+    .bootstrap .col-sm-8,
+    .bootstrap .col-sm-10,
+    .bootstrap .col-sm-11,
+    .bootstrap .col-sm-12 {
+        float: left
+    }
+    .bootstrap .col-sm-1 {
+        width: 8.33333%
+    }
+    .bootstrap .col-sm-2 {
+        width: 16.66667%
+    }
+    .bootstrap .col-sm-4 {
+        width: 33.33333%
+    }
+    .bootstrap .col-sm-5 {
+        width: 41.66667%
+    }
+    .bootstrap .col-sm-6 {
+        width: 50%
+    }
+    .bootstrap .col-sm-7 {
+        width: 58.33333%
+    }
+    .bootstrap .col-sm-8 {
+        width: 66.66667%
+    }
+    .bootstrap .col-sm-10 {
+        width: 83.33333%
+    }
+    .bootstrap .col-sm-11 {
+        width: 91.66667%
+    }
+    .bootstrap .col-sm-12 {
+        width: 100%
+    }
+}
+
+@media (min-width: 1200px) {
+    .bootstrap .col-lg-1,
+    .bootstrap .col-lg-3,
+    .bootstrap .col-lg-4,
+    .bootstrap .col-lg-6,
+    .bootstrap .col-lg-8,
+    .bootstrap .col-lg-9,
+    .bootstrap .col-lg-10,
+    .bootstrap .col-lg-11,
+    .bootstrap .col-lg-12 {
+        float: left
+    }
+    .bootstrap .col-lg-1 {
+        width: 8.33333%
+    }
+    .bootstrap .col-lg-3 {
+        width: 25%
+    }
+    .bootstrap .col-lg-4 {
+        width: 33.33333%
+    }
+    .bootstrap .col-lg-6 {
+        width: 50%
+    }
+    .bootstrap .col-lg-8 {
+        width: 66.66667%
+    }
+    .bootstrap .col-lg-9 {
+        width: 75%
+    }
+    .bootstrap .col-lg-10 {
+        width: 83.33333%
+    }
+    .bootstrap .col-lg-11 {
+        width: 91.66667%
+    }
+    .bootstrap .col-lg-12 {
+        width: 100%
+    }
+}
+
+.bootstrap fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0
+}
+
+.bootstrap legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.bootstrap label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold
+}
+
+.bootstrap input[type="radio"],
+.bootstrap input[type="checkbox"] {
+    margin: 3px 0 0;
+    margin-top: 1px \9;
+    line-height: normal
+}
+
+.bootstrap input[type="radio"]:focus,
+.bootstrap input[type="checkbox"]:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.bootstrap .form-control,
+.bootstrap input[type="text"],
+.bootstrap select {
+    display: block;
+    width: 100%;
+    height: 31px;
+    padding: 6px 8px;
+    font-size: 12px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #F5F8F9;
+    background-image: none;
+    border: 1px solid #C7D6DB;
+    border-radius: 3px;
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+}
+
+.bootstrap .form-control:focus,
+.bootstrap input[type="text"]:focus,
+.bootstrap select:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+}
+
+.bootstrap .form-control::-moz-placeholder,
+.bootstrap input[type="text"]::-moz-placeholder,
+.bootstrap select::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.bootstrap .form-control:-ms-input-placeholder,
+.bootstrap input[type="text"]:-ms-input-placeholder,
+.bootstrap select:-ms-input-placeholder {
+    color: #999
+}
+
+.bootstrap .form-control::-webkit-input-placeholder,
+.bootstrap input[type="text"]::-webkit-input-placeholder,
+.bootstrap select::-webkit-input-placeholder {
+    color: #999
+}
+
+.bootstrap .form-group {
+    margin-bottom: 15px
+}
+
+.bootstrap .radio,
+.bootstrap .checkbox {
+    display: block;
+    min-height: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.bootstrap .radio label,
+.bootstrap .checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: left;
+    cursor: pointer
+}
+
+.bootstrap .radio input[type="radio"],
+.bootstrap .checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: -20px
+}
+
+.bootstrap .radio+.radio {
+    margin-top: -5px
+}
+
+.bootstrap .form-horizontal .radio,
+.bootstrap .form-horizontal .checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px
+}
+
+.bootstrap .form-horizontal .radio,
+.bootstrap .form-horizontal .checkbox {
+    min-height: 24px
+}
+
+.bootstrap .form-horizontal .form-group {
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+.bootstrap .form-horizontal .form-group:before,
+.bootstrap .form-horizontal .form-group:after {
+    content: " ";
+    display: table
+}
+
+.bootstrap .form-horizontal .form-group:after {
+    clear: both
+}
+
+@media (min-width: 768px) {
+    .bootstrap .form-horizontal .control-label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 7px;
+        padding-right: 25px;
+    }
+}
+
+.debugelement_last{
+    padding-bottom: 4px !important;
+}
+
+.bootstrap .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 8px;
+    font-size: 12px;
+    line-height: 1.42857;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.bootstrap .btn:focus,
+.bootstrap .btn:active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.bootstrap .btn:hover,
+.bootstrap .btn:focus {
+    color: #363A41;
+    text-decoration: none
+}
+
+.bootstrap .btn:active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+}
+
+.bootstrap .btn-default {
+    color: #363A41;
+    background-color: #fff;
+    border-color: #DEDEDE
+}
+
+.bootstrap .btn-default:hover,
+.bootstrap .btn-default:focus,
+.bootstrap .btn-default:active {
+    color: #363A41;
+    background-color: #e6e6e6;
+    border-color: #bfbfbf
+}
+
+.bootstrap .btn-default:active {
+    background-image: none
+}
+
+.bootstrap .btn-danger {
+    color: #fff;
+    background-color: #E08F95;
+    border-color: #da7b82
+}
+
+.bootstrap .btn-danger:hover,
+.bootstrap .btn-danger:focus,
+.bootstrap .btn-danger:active {
+    color: #fff;
+    background-color: #d5676f;
+    border-color: #cd4b55
+}
+
+.bootstrap .btn-danger:active {
+    background-image: none
+}
+
+.bootstrap .btn-lg {
+    padding: 10px 16px;
+    font-size: 15px;
+    line-height: 1.33;
+    border-radius: 3px
+}
+
+.bootstrap .btn-sm {
+    padding: 5px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+
+.bootstrap .collapse {
+    display: none
+}
+
+.bootstrap .alert {
+    padding: 15px;
+    margin-bottom: 17px;
+    border: 1px solid transparent;
+    border-radius: 3px
+}
+
+.bootstrap .alert-info {
+    background-color: #DCF4F9;
+    border-color: #25b9d7;
+    color: #1e94ab
+}
+
+.bootstrap .list-group {
+    margin-bottom: 20px;
+    padding-left: 0
+}
+
+.bootstrap .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+
+.bootstrap .list-group-item:first-child {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px
+}
+
+.bootstrap .list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px
+}
+
+.bootstrap .panel {
+    margin-bottom: 17px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+
+.bootstrap .panel-body {
+    padding: 15px
+}
+
+.bootstrap .panel-body:before,
+.bootstrap .panel-body:after {
+    content: " ";
+    display: table
+}
+
+.bootstrap .panel-body:after {
+    clear: both
+}
+
+.bootstrap .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px
+}
+
+.bootstrap .panel-footer {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px
+}
+
+.bootstrap .well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #FCFDFE;
+    border: 1px solid #e1ebf5;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+
+.bootstrap .clearfix:before,
+.bootstrap .clearfix:after {
+    content: " ";
+    display: table
+}
+
+.bootstrap .clearfix:after {
+    clear: both
+}
+
+.bootstrap .pull-right {
+    float: right !important
+}
+
+.bootstrap .hidden {
+    display: none !important;
+    visibility: hidden !important
+}
+
+@-ms-viewport {
+    .bootstrap {
+        width: device-width
+    }
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%
+}
+
+body {
+    font: 400 12px/1.42857 "Open Sans", Helvetica, Arial, sans-serif;
+    color: #555;
+    background-color: #EFF1F2;
+    -webkit-tap-highlight-color: transparent
+}
+
+.bootstrap .panel .panel-footer {
+    height: 73px;
+    border-color: #eee;
+    background-color: #FCFDFE;
+    margin: 15px -20px -20px
+}
+
+.bootstrap .panel .panel-footer .btn {
+    line-height: 1em;
+    background: #dff2bf;
+    border: 1px solid #7ac142;
+}
+
+[class^="icon-"] {
+    font-size: 14px
+}
+
+[class^="process-icon-"] {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 28px;
+    background: transparent;
+    background-size: 26px;
+    background-position: center
+}
+
+.bootstrap .fixed-width-lg {
+    width: 160px !important
+}
+
+.bootstrap .img-thumbnail {
+    background-color: #fff;
+    border-color: #ccc !important
+}
+
+.bootstrap .alert.alert-info {
+    position: relative;
+    border: none;
+    padding-left: 50px;
+    border-left: solid 3px #4ac7e0
+}
+
+.bootstrap .alert.alert-info:before {
+    position: absolute;
+    top: 6px;
+    display: block;
+    height: 25px;
+    width: 25px;
+    color: #4ac7e0;
+    left: 7px
+}
+
+.bootstrap .pointer {
+    cursor: pointer
+}
+
+.bootstrap label.control-label {
+    font-size: 13px;
+    font-weight: normal;
+    color: #666;
+    text-align: left;
+}
+
+.bootstrap .row label{
+    text-align: left;
+}
+
+.language .img_flag{
+    width: 26px;
+    height: 21px;
+}
+
+.bootstrap label.control-label span.label-tooltip {
+    text-decoration: none;
+    font-size: 13px;
+    color: #3586AE;
+    background-color: #edf7fb;
+    border: none;
+    border-bottom: solid 1px #D8EDF7;
+    padding: 0 5px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px
+}
+
+.bootstrap input[type="text"]:focus {
+    background-color: #FEFBE2;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.bootstrap .btn.btn-default i {
+    color: #555
+}
+
+.bootstrap .btn.btn-default:hover {
+    color: #fff;
+    background-color: #00aff0;
+    border-color: #008abd;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.bootstrap .btn.btn-default:hover i {
+    color: #fff
+}
+
+@media (max-width: 1200px) {
+    .bootstrap .form-group input[type="text"],
+    .bootstrap .form-group select {
+        margin: 4px 0
+    }
+}
+
+.bootstrap input[type="text"] {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif, "FontAwesome" !important
+}
+
+.bootstrap .switch a {
+    display: none
+}
+
+@media only screen {
+    .bootstrap .switch {
+        display: block;
+        height: 26px;
+        position: relative
+    }
+    .bootstrap .switch * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .bootstrap .switch a {
+        display: block;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out
+    }
+    .bootstrap .switch label {
+        line-height: 22px;
+        vertical-align: middle
+    }
+    .bootstrap .switch input {
+        position: absolute;
+        opacity: 0
+    }
+    .bootstrap .switch label {
+        position: relative;
+        z-index: 2;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        float: left
+    }
+    .bootstrap .switch a {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        z-index: 1;
+        width: 50%;
+        height: 100%;
+        color: #fff;
+        border: solid 1px #279CBB;
+        background-color: #2eacce;
+        left: 0;
+        -webkit-box-shadow: "#1B7088" 0 -1px 0 inset;
+        box-shadow: "#1B7088" 0 -1px 0 inset
+    }
+    .bootstrap .switch input:last-of-type:checked ~ a {
+        border: solid 1px #CA6F6F;
+        background-color: #E08F95;
+        left: 50%;
+        -webkit-box-shadow: "#5C5C5C" 0 -1px 0 inset;
+        box-shadow: "#5C5C5C" 0 -1px 0 inset
+    }
+    .bootstrap .switch input:disabled ~ a {
+        border: solid 1px #b3b3b3 !important;
+        background-color: #cdcdcd !important;
+        -webkit-box-shadow: #b3b3b3 0 -1px 0 inset !important;
+        box-shadow: #b3b3b3 0 -1px 0 inset !important
+    }
+    .bootstrap .prestashop-switch {
+        margin-top: 3px;
+        background-color: #eee;
+        border-radius: 3px;
+        color: #333;
+        text-align: center;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px 1px inset;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px 1px inset;
+    }
+    .bootstrap .prestashop-switch * {
+        outline: 0 !important
+    }
+    .bootstrap .prestashop-switch label {
+        text-transform: uppercase;
+        color: #bbb;
+        font-weight: 400;
+        cursor: pointer;
+        -webkit-transition: color 0.2s ease-out;
+        -o-transition: color 0.2s ease-out;
+        transition: color 0.2s ease-out
+    }
+    .bootstrap .prestashop-switch input:checked+label {
+        color: #fff
+    }
+}
+
+.bootstrap .alert.alert-info {
+    position: relative;
+    border: none;
+    padding-left: 50px;
+    border-left: solid 3px #4ac7e0;
+}
+
+.bootstrap .panel-body .alert-info {
+    background-color: #DCF4F9 !important;
+    border: none !important;
+    border-color: #25b9d7;
+    color: #1e94ab;
+}
+
+.bootstrap .alert {
+    padding: 15px;
+    margin-bottom: 17px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+
+.bootstrap .panel-heading {
+    font-size: 1.2em;
+    line-height: 2.2em;
+    height: 2.2em;
+    text-transform: uppercase;
+    border-bottom: solid 1px #eee;
+    padding: 0 0 0 5px;
+    margin: -20px -16px 15px -16px;
+    border-bottom: 1px solid #f1f1f1;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    background: rgba(245, 245, 245, 0.22);
+}
+
+.bootstrap .panel .panel-footer {
+    height: 73px;
+    border-color: #eee;
+    background-color: #FCFDFE;
+    margin: 15px -20px -20px;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    clear:both;
+}
+
+.bootstrap .panel-body {
+    padding: 15px;
+}
+
+.bootstrap .row {
+    background: white !important;
+}
+
+.bootstrap .panel{
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: solid 1px #d3d8db;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.actionadvanced{
+    width: auto !important;
+}

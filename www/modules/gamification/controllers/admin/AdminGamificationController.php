@@ -15,7 +15,7 @@ class AdminGamificationController extends ModuleAdminController
         }
     }
     
-    public function setMedia()
+    public function setMedia($isNewTheme = false)
     {
         $this->addJqueryUI('ui.progressbar');
         $this->addJS(_MODULE_DIR_.$this->module->name.'/views/js/bubble-popup.js');
@@ -29,7 +29,7 @@ class AdminGamificationController extends ModuleAdminController
         $this->addJs(_MODULE_DIR_.$this->module->name.'/views/js/jquery.isotope.js');
         $this->addCSS(array(_MODULE_DIR_.$this->module->name.'/views/css/bubble-popup.css', _MODULE_DIR_.$this->module->name.'/views/css/isotope.css'));
         
-        return parent::setMedia();
+        return parent::setMedia($isNewTheme);
     }
     
     public function initToolBarTitle()
@@ -154,7 +154,7 @@ class AdminGamificationController extends ModuleAdminController
                 $return['advices_premium_to_display']['advices'] = array($weighted_advices_array[$rand], $weighted_advices_array[$rand2]);
             } elseif (count($return['advices_premium_to_display']['advices']) > 0) {
                 $addons = Advice::getAddonsAdviceByIdTab((int)Tools::getValue('id_tab'));
-                $return['advices_premium_to_display']['advices'][] = $addons[0];
+                $return['advices_premium_to_display']['advices'][] = array_shift($addons);
             }
         }
         

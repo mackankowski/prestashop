@@ -35,7 +35,7 @@ class Psaddonsconnect extends Module
         // Settings
         $this->name = 'psaddonsconnect';
         $this->tab = '';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -182,6 +182,10 @@ class Psaddonsconnect extends Module
                     "averageCart" => "https://addons.prestashop.com/ru/2-modules-prestashop?m=1&benefits=3&utm_source=back-office&utm_medium=AddonsConnect&utm_campaign=back-office-RU&utm_content=cart",
                     "businessSector" => "https://addons.prestashop.com/ru/content/44-prestashop-resources-the-tools-for-success?utm_source=back-office&utm_medium=AddonsConnect&utm_campaign=back-office-RU&utm_content=sector#modulebusinesssector"),
             );
+
+            if (!isset($url[$iso_lang])) {
+                return $url['en'];
+            }
 
             return  $url[$iso_lang];
     }

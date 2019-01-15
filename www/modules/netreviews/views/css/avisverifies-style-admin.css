@@ -1,0 +1,557 @@
+/**
+* 2012-2018 NetReviews
+*
+*  @author    NetReviews SAS <contact@avis-verifies.com>
+*  @copyright 2018 NetReviews SAS
+*  @version   Release: $Revision: 7.6.5
+*  @license   NetReviews
+*  @date      20/09/2018
+*  International Registered Trademark & Property of NetReviews SAS
+*/
+
+@font-face {
+  font-family: 'nr-icons';
+  src:  url('../fonts/nr-icons/nr-icons.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url('../fonts/Nunito/Nunito-Regular.ttf');
+}
+
+.av_backoffice{
+    background: #fff;
+}
+.btn_av_small a{
+    color: #ccc;
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid #ccc !important;
+}
+.language {
+    border-bottom: 1px dotted #56b4d6;
+    margin-bottom: 16px;
+}
+
+.language label.control-label {
+    text-align:left;
+}
+
+.namelanguage {
+    color: black !important;
+    text-align: left !important;
+}
+.netreviews_bo_wrapper {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: black;
+}
+.netreviews_bo_wrapper .btn {
+    background: #e89025;
+    border: white;
+    font-weight: bold;
+}
+
+.netreviews_bo_wrapper hr {
+    border-top: solid #E89025 6px;
+    margin: 0px;
+    padding: 0px;
+    width: 96%;
+    margin-left: 2%;
+}
+
+.netreviews_bo_wrapper h1 {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.av_display_center{
+    display: block;
+    margin: auto;
+}
+
+.av_padding20{
+    padding: 10px 20px;
+}
+.av-list-stars li {
+    list-style-image: url(../img/star-orange-16.png);
+    margin-left: 15px;
+    line-height: 25px;
+    text-align: left;
+}
+.bootstrap .prestashop-switch input:checked+label {
+    color: #fff;
+}
+.language .img_flag{
+    max-width: 26px;
+}
+
+/* old version Backoffice */
+#avisverifies_module label {
+    text-align: left;
+    margin-right: 15px;
+}
+fieldset .fieldsetav {
+    border: 1px solid #c4c4c4;
+    background-color: #f9f9f9;
+}
+label .titlepart {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f9791c;
+}
+#avisverifies_module input[type=text] {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+#avisverifies_module .floatleft {
+    float: left;
+}
+#avisverifies_module #export {
+    margin-left: 10px;
+}
+#avisverifies_module p.help {
+    font-style: italic;
+    color: #9E9E9E;
+    font-size: 11px;
+}
+#avisverifies_module p.help.withfloat {
+    float: left;
+}
+#avisverifies_module p.help.inline {
+    display: inline;
+}
+#avisverifies_module #order-statut-list {
+    list-style: none;
+    float: left;
+    margin-top: 0;
+    padding: 0;
+}
+#avisverifies_module .field-line {
+    margin-bottom: 10px;
+    display: block;
+}
+#avisverifies_module label.label-pointer {
+    float: none;
+    text-align: right;
+    font-weight: 400;
+}
+#avisverifies_module a {
+    color: #F9791C;
+    font-weight: 700;
+}
+#avisverifies_module #av-header-intro {
+    border: 1px solid #C4C4C4;
+    background-color: #F9F9F9;
+    margin-bottom: 10px;
+}
+#avisverifies_module #av-top {
+    text-align: center;
+}
+hr.orange {
+    border-bottom: 2px solid #FFA851;
+    width: 70%;
+    margin: 25px auto;
+}
+#av-top #av-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #F9791C;
+	vertical-align: middle;
+}
+#av-top .tg-031e {
+	vertical-align: middle;
+}
+#avisverifies_module .tg td, #avisverifies_module .tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+}
+#avisverifies_module table {
+    border: none;
+}
+#avisverifies_module .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%}
+#avisverifies_module .tg th {
+    font-weight: 400;
+    width: 30%}
+.av-button-calltoaction {
+    moz-box-shadow: inset 0 1px 0 0 #fce2c1;
+    -webkit-box-shadow: inset 0 1px 0 0 #fce2c1;
+    box-shadow: inset 0 1px 0 0 #fce2c1;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.05, #eb9c3b), color-stop(1, #e88e21));
+    background: -moz-linear-gradient(center top, #eb9c3b 5%, #e88e21 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb9c3b',  endColorstr='#e88e21');
+    background-color: #eb9c3b;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-bottomleft: 7px;
+    text-indent: 0;
+    border: 1px solid #eeb44f;
+    display: inline-block;
+    color: #fff!important;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #cc9f52;
+    padding: 15px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+#debug-part, .italic {
+    font-style: italic;
+}
+.av-button-calltoaction:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.05, #e88e21), color-stop(1, #eb9c3b));
+    background: -moz-linear-gradient(center top, #e88e21 5%, #eb9c3b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e88e21',  endColorstr='#eb9c3b');
+    background-color: #e88e21;
+}
+.av-button-calltoaction:active {
+    position: relative;
+    top: 1px;
+}
+.av-list-star li {
+    list-style-image: url(/modules/netreviews/views/img/single-star.png);
+    margin-left: 15px;
+    line-height: 25px;
+    text-align: left;
+}
+#av-middle table th p {
+    font-size: 14px;
+    font-weight: 400;
+}
+#av-middle .mini-title {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+}
+span.asterisc {
+    padding: 10px;
+    font-size: 10px;
+}
+.tg-031e p {
+    text-align: left;
+}
+.tg-031e.valigntop {
+    vertical-align: top;
+}
+.fieldsetav {
+    border: 1px solid #c4c4c4!important;
+    background-color: #f9f9f9!important;
+}
+.titlepart {
+    margin-bottom: 20px;
+    text-align: left!important;
+    width: 100%!important;
+    font-size: 22px;
+    font-weight: 700!important;
+    color: #f9791c!important;
+}
+button pointer {
+    cursor: pointer;
+}
+div.languages {
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+div.languages>span {
+    vertical-align: bottom;
+}
+#VersionModule {
+    font-size: 10px;
+}
+#blockConfiguration {
+    width: 70%;
+    margin: 0 auto;
+}
+#avisverifies_module table td label {
+    margin-right: 15px;
+    color: #585a69;
+    text-shadow: 0 1px 0 #fff;
+    padding: .2em 0 0 .5em;
+    text-align: left;
+    float: none;
+    font-weight: 700;
+}
+#avisverifies_module table th {
+    width: 200px;
+    text-align: left;
+}
+.text_decoration_none {
+    text-decoration: none;
+    color: #000!important;
+    font-weight: inherit!important;
+}
+.cbOrderstates {
+    margin: 5px 0;
+}
+
+.netreviews_stars {
+    display: inline-block;
+    padding: 0px;
+    border: none;
+    background-repeat: repeat-x;
+    background-position: left center;
+    text-decoration: none;
+    outline: none;
+}
+
+.netreviews_stars span {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-repeat: repeat-x;
+    background-position: left center;
+    text-decoration: none;
+    outline: none;
+    line-height: 1px;
+    font-size: .1px;
+}
+
+.netreviews_stars_sm{
+    width: 60px;
+    float: left; 
+}
+.netreviews_stars_md {
+    width: 80px;
+}
+.netreviews_stars_bg {
+    display: block;
+    width: 120px;
+    margin: 0px auto;
+    background-image: url(../img/star-empty-24.png);
+}
+
+.netreviews_stars_md, .netreviews_stars_sm{
+    background-image: url(../img/star-empty-16.png);
+}
+
+.netreviews_stars_md span, .netreviews_stars_sm span {
+    background-image: url(../img/star-gold-16.png);
+}
+
+.netreviews_stars_bg span{
+    background-image: url(../img/star-gold-24.png);
+}
+.netreviews_stars_sm ,.netreviews_stars_sm span {
+    height: 25px;
+    background-size: 12px auto;
+}
+
+.netreviews_stars_md ,.netreviews_stars_md span {
+    height: 16px;
+    background-size: 16px auto;
+}
+
+.netreviews_stars_bg ,.netreviews_stars_bg span {
+    height: 24px;
+    background-size: 24px auto;
+}
+
+.av_product_award {
+    height: 72px;
+    background: #f0f0f0;
+    border: 1px solid #b6b6b6;
+    border-radius: 15px;
+    position: relative;
+    margin: 10px 0;
+    width: 220px;
+    clear: both
+}
+
+.av_product_award .netreviews_stars{
+    margin: auto;
+}
+.av_product_award img#sceau {
+    position: absolute;
+    right: -12px;
+    top: -10px;
+    width: 90px
+}
+
+.av_product_award #bottom {
+    background: #f7ad26;
+    background: -moz-linear-gradient(top, #f7ad26 1%, #f49112 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f7ad26), color-stop(100%, #f49112));
+    background: -webkit-linear-gradient(top, #f7ad26 1%, #f49112 100%);
+    background: -o-linear-gradient(top, #f7ad26 1%, #f49112 100%);
+    background: -ms-linear-gradient(top, #f7ad26 1%, #f49112 100%);
+    background: linear-gradient(to bottom, #f7ad26 1%, #ffc400 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f7ad26', endColorstr='#f49112', GradientType=0);
+    height: 24px;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    position: absolute;
+    width: 90%;
+    padding-top: 3px;
+}
+
+.av_product_award #AV_button {
+    color: #000;
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    margin-right: 47px;
+}
+
+.av_product_award #top {
+    width: 68%;
+    text-align: center;
+    display: grid;
+    height: 46px;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.netreviewsProductWidgetNew {
+    font-family: Tahoma,Geneva,sans-serif;
+    display: block;
+    height: 75px;
+    margin: 0;
+    padding: 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.netreviewsProductWidgetNewLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    border: none;
+    outline: 0
+}
+
+.netreviewsProductWidgetNew .ProductWidgetNewRatingWrapper {
+    margin-left: 60px;
+    display: block;
+    width: 200px;
+    line-height: 16px;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.netreviewsProductWidgetNewRate,
+.netreviewsProductWidgetNewRate span {
+    color: #363842;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.showexample_stars{
+    height: auto;
+    padding: 12px 0;
+    line-height: 20px;
+    display: table-cell !important;
+    clear: both;
+}
+
+#show_exampleimage{
+    display: none;
+    position: absolute;
+    left: -120px;
+    top: -100px;
+    border: 5px solid whitesmoke;
+}
+
+.av_product_award #top .netreviews_font_stars div{
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.av_product_award #top .netreviews_font_stars{
+    display: block;
+    margin: auto;
+    width: 85px;
+}
+
+.netreviews_font_stars div .nr-star:before{
+    font-size: 16px;
+}
+
+.netreviews_font_stars div {
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px; 
+}
+
+ .netreviews_font_stars{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.netreviews_rate_percent{
+    background: #FFCD00 !important;
+}
+.nr-icon.gold,.netreviews_rate_list_item .av_star_index {
+    color: #FFCD00 !important; 
+}
+
+.netreviews_rate_percent:hover, .av_product_award #bottom {
+    background: #FFCD00;
+}
+
+.nr-icon.grey {
+    color: #D1D1D1 !important;
+}
+.nr-icon {
+  font-family: 'nr-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nr-comment:before {
+  content: "\e900";
+  color: #2C2C2C;
+}
+.nr-exit:before {
+  content: "\e901";
+}
+.nr-info:before {
+  content: "\e902";
+}
+.nr-star:before {
+  content: "\e903";
+}
+.showexample_stars #slide {
+    display: inline-block;
+    margin-left: 83px;
+    line-height: 20px;
+    vertical-align: super;
+}
+.netreviews_review_rate_and_stars {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    position: relative;
+}
